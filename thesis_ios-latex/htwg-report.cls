@@ -415,11 +415,11 @@
         \node at (139.8mm,-37mm)[anchor=north west, fill=htwg-dark-blue]{
             \begin{minipage}[t]{55mm}
                 \begin{flushleft}
-                    \color{htwg-white}\scriptsize\textbf{Eingereicht von}
+                    \color{htwg-black}\scriptsize\textbf{Submitted by}
                     \linebreak
                     \color{htwg-white}\scriptsize{\@author}
                     \linebreak 
-                    \color{htwg-white}\scriptsize{Matrikelnummer \@student@number}
+                    \color{htwg-black}\scriptsize{enrolment number \@student@number}
                     \linebreak
                     \linebreak
                     \color{htwg-white}\scriptsize{\@student@email}
