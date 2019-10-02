@@ -300,7 +300,7 @@
         scale = 1, angle = 0, opacity = 1,
         contents = {\includegraphics[width = \paperwidth,
         height = \paperheight, keepaspectratio]
-        {report_cover_empty.pdf}}
+        {report_titel_page.pdf}}
     }
 
     %% We need the this to perform coordinate calculations in TikZ.
@@ -398,42 +398,42 @@
 
 
         %% Create the titel text box.
-        \node at (14.5mm,-174.5mm)[anchor=north west, fill=htwg-dark-blue]{
+        \node at (14.5mm,-174.5mm)[anchor=north west]{
             \begin{minipage}[t]{145mm}
                 \begin{flushleft}
                     %% Print Report Type Text
-                    \color{htwg-white}\Huge\textbf{\@report@typetext}
+                    \color{htwg-black}\Huge\textbf{\@report@typetext}
                     \\
                     %% Print Report Title
-                    \color{htwg-white}\Huge{\@title}
+                    \color{htwg-black}\Huge{\@title}
                 \end{flushleft}
             \end{minipage}
         };
 
 
         %% Create the author text box.
-        \node at (139.8mm,-37mm)[anchor=north west, fill=htwg-dark-blue]{
+        \node at (139.8mm,-37mm)[anchor=north west, fill=white]{
             \begin{minipage}[t]{55mm}
                 \begin{flushleft}
                     \color{htwg-black}\scriptsize\textbf{Submitted by}
                     \linebreak
-                    \color{htwg-white}\scriptsize{\@author}
+                    \color{htwg-black}\scriptsize{\@author}
                     \linebreak 
                     \color{htwg-black}\scriptsize{enrolment number \@student@number}
                     \linebreak
                     \linebreak
-                    \color{htwg-white}\scriptsize{\@student@email}
+                    \color{htwg-black}\scriptsize{\@student@email}
                 \end{flushleft}
             \end{minipage}
         };
 
 
         %% Create the date text box.
-        \node at (139.8mm,-268mm)[anchor=north west, fill=htwg-dark-blue]{
+        \node at (139.8mm,-268mm)[anchor=north west, fill=white]{
             \begin{minipage}[t]{55mm}
                 \begin{flushleft}
-                    \color{htwg-white}\scriptsize\textbf{\@doc@location,}
-                    \color{htwg-white}\scriptsize\textbf{\@doc@date}
+                    \color{htwg-black}\scriptsize\textbf{\@doc@location,}
+                    \color{htwg-black}\scriptsize\textbf{\@doc@date}
                 \end{flushleft}
             \end{minipage}
         };
