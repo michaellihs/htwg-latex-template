@@ -1,0 +1,73 @@
+%
+% LaTeX template at the Institute for Optical Systems (IOS)
+%
+% Author: Nico Brügel  (nico.bruegel@htwg-konstanz.de)
+% Date: 11.10.2019
+%
+
+% Include header
+\include{header/header}
+
+% Set variables used in cover, title, abstract and affidavit.
+\newcommand{\ausgabedatum}{1. Monat 2019}
+\newcommand{\abgabedatum}{31. Monat 2019}
+\newcommand{\autor}{Erika Mustermann}
+\newcommand{\autorStrasse}{Alfred-Wachtel-Str. 8}
+\newcommand{\autorPLZ}{78462}
+\newcommand{\autorOrt}{Konstanz}
+\newcommand{\autorGeburtsort}{Berlin}
+\newcommand{\autorGeburtsdatum}{12.08.1964}
+\newcommand{\prueferA}{Prüfer A}
+\newcommand{\prueferB}{Prüfer B}
+\newcommand{\firma}{HTWG Konstanz, Institut für Optische Systeme}
+\newcommand{\studiengang}{Master of Science Informatik}
+
+
+\newcommand{\thema}{Thema der Abschlussarbeit}
+
+\newcommand{\schlagworte}{Schlagwort, Blockchain, Bingo}
+
+\begin{document}
+
+% Include title pages
+\include{title/cover}
+\include{title/title}
+
+% Set page numbering to roman
+\pagenumbering{Roman}
+
+% Include abstract and affidavit
+\include{title/affidavit}
+\include{title/abstract}
+\include{extended_abstract/extended_abstract}
+
+% Include table of contents
+\tableofcontents
+\newpage
+
+% Aktuelle Seitenzahl in einem Zähler speichern
+% -> römische Seitennummerierung soll durchgängig
+% sein und wird nachher wieder aufgegriffen.
+% --------------------------------------------------------
+\newcounter{anhang}
+\setcounter{anhang}{\value{page}}
+
+% Set page numbering to arabic
+\pagenumbering{arabic}
+
+% Include the chapters
+% ---------------------------------------------------------------------------
+\include{chapters/introduction}
+\include{chapters/fundamentals}
+\include{chapters/experiments}
+\include{chapters/discussion-conclusion}
+
+% ---------------------------------------------------------------------------
+%\pagenumbering{Roman}
+%\setcounter{page}{\value{anhang}}
+\include{chapters/bibliography}
+\include{chapters/listoffigures}
+\include{chapters/listoftables}
+\include{appendix/appendix}
+
+\end{document}
